@@ -79,7 +79,7 @@ width="720" height="404"]http://www.kylegilman.net/wp-content/uploads/2006/09/Re
 
 = These options will only affect Video.js playback =
 
-* `skin="example-css-class"` Completely change the look of the video player. <a href="https://github.com/zencoder/video-js/blob/master/docs/skins.md">Instructions here.</a>
+* `skin="example-css-class"` Completely change the look of the video player. [Instructions here](http://daringfireball.net/projects/markdown/syntax#link).
 
 = These options will only affect Flash playback in Strobe Media Playback video elements. They will have no effect on other players. =
 
