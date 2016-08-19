@@ -1,3 +1,11 @@
+.compat-attachment-fields {
+	color: #666;
+}
+
+.kgvid_meter {
+	text-indent: 0px;
+}
+
 .kgvid_meter, .meter_finished {
 	height: 14px;
 	width: 125px;
@@ -66,7 +74,7 @@
 	color: white;
 	font-size: 80%;
 	position:relative;
-	top: -2px;
+	top: -3px;
 }
 
 .kgvid_cancel_button {
@@ -111,12 +119,29 @@ div.kgvid_cancel_button input {
     font-size: 1pt;
 }
 
-.compat-item .field {
-	width: 85%;
+.compat-item .kgvid_encoding_small_text {
+	text-indent: 0px;
+	display: block;
+	margin-left: -30px;
+}
+
+.media-frame .compat-item .field {
+	width: 90%;
 }
 
 .compat-item .field input {
 	width: auto;
+}
+
+.compat-item .kgvid_checkboxes_section ul li {
+	margin-bottom: 10pt;
+	line-height: 16pt;
+	padding-left: 30px;
+	text-indent: -30px;
+}
+
+.kgvid_format_meta {
+	text-indent: 0px;
 }
 
 #poststuff .nav-tab-wrapper.kgvid-tabs {
@@ -140,12 +165,39 @@ div.kgvid-tabs-content {
 }
 
 div.kgvid_thumbnail_box {
+	position:relative;
 	border-style:solid;
 	border-color:#ccc;
 	border-width:1px;
 	text-align:center;
 	margin:12px 0;
 	padding:5px;
+}
+
+div.kgvid_track_box {
+	text-align:left;
+}
+
+div.kgvid_track_box:hover {
+	background-color: #F7F7F7;
+}
+
+.compat-item .field .kgvid_track_box input {
+	margin-top: 3px;
+}
+
+.kgvid_track_box_removeable {
+	width: 15px;
+	height: 15px;
+	float: right;
+	text-align: right;
+	font-weight: bold;
+	color: #BC0B0B;
+	cursor: pointer;
+}
+
+.kgvid_track_box_removeable:hover {
+	color: red;
 }
 
 div.kgvid_chosen_thumbnail_box {
@@ -161,10 +213,22 @@ div.kgvid_chosen_thumbnail_box {
 
 div.kgvid_thumbnail_overlay {
     width: 100%;
-    height:100%;
     background: #fff;
     opacity: 0.5;
     filter: alpha(opacity = 50); /* required for opacity to work in IE */
+}
+
+div.kgvid_save_overlay {
+    position: absolute;
+    top: 70%;
+    font-size: 160%;
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+}
+
+div.kgvid_video_app_required {
+	background: inherit;
 }
 
 div.kgvid_thumbnail_select {
@@ -205,6 +269,13 @@ font-weight: normal;
 .kgvid_setting_nearvid div {
 	margin: 5px;
 	font-weight: bold;
+	white-space: nowrap;
+
+}
+
+.kgvid_setting_nearvid span {
+    display: inline-block;
+    width: 33%;
 }
 
 .kgvid_htaccess td {
@@ -212,18 +283,17 @@ font-weight: normal;
 }
 
 .kgvid_tooltip {
-  color: #000000; outline: none;
-  cursor: help; text-decoration: none;
+  cursor: help;
+  text-decoration: none;
   position: relative;
 }
 
-.kgvid_tooltip img {
-  width:20px;
-  height:20px;
-  background-image:url("../../../../wp-includes/images/wpicons.png");
-  background-position: -520px 0px;
-  position:relative;
-  top:6px;
+.kgvid_tooltip:before {
+	content: '\f223';
+	font-family: dashicons;
+	font-size: 16pt;
+	vertical-align: middle;
+	margin-left: 5px;
 }
 
 .kgvid_tooltip span {
@@ -233,13 +303,14 @@ font-weight: normal;
 }
 
 .kgvid_tooltip:hover span {
-  font-family: Calibri, Tahoma, Geneva, sans-serif;
   position: absolute;
   left: 1em;
   top: 2em;
   z-index: 99;
   margin-left: 0;
   width: 250px;
+  font-weight: normal;
+  white-space: normal;
   border-radius: 5px 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -256,7 +327,7 @@ font-weight: normal;
   padding: 0.2em 0 0.6em 0;
 }
 
-.kgvid_tooltip_classic { padding: 0.8em 1em; background: #FFFFAA; border: 1px solid #FFAD33; }
+.kgvid_tooltip_classic { padding: 0.8em 1em; background: #ddd; border: 2px solid #999; }
 .custom { padding: 0.5em 0.8em 0.8em 2em; }
 * html a:hover { background: transparent; }
 
@@ -275,9 +346,7 @@ font-weight: normal;
 a.kgvid_delete-format {
 	color: #BC0B0B !important;
 	text-decoration: none;
-	margin-left: 15px;
 	display: block;
-	margin-bottom: -10px;
 }
 
 a.kgvid_delete-format:hover {
@@ -471,3 +540,69 @@ td.media-icon img {
 	height: 100%;
 	padding: 0;
 }
+
+.kgvid-donate-box {
+	width: 454px;
+	margin: 30px 0;
+	padding: 20px 20px 0 20px;
+	border: 2px solid #ddd;
+}
+
+.kgvid-donate-box > * {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	text-align: center;
+	font-size: 13pt;
+	line-height: 17pt;
+	margin-bottom: 10px;
+}
+
+.kgvid_warning {
+	color:red;
+}
+
+.kgvid_50_width {
+	max-width: 50px;
+}
+
+.kgvid_user_roles {
+	display: inline-block;
+	margin: 0 45px 15px 0;
+}
+
+.kgvid_user_roles strong {
+	padding-bottom: 5px;
+	display: inline-block;
+}
+
+.kgvid_queue_message {
+	font-size: 129%;
+	color: #298CBA;
+}
+
+#jw_player_id_select {
+	margin-top: 5px;
+}
+
+#kgflashmediaplayer-table input {
+	width: auto;
+}
+
+.attachment-preview.type-video .thumbnail {
+	z-index: 0;
+}
+
+.compat-item .kgvid_encode_checkbox_button {
+	font-size: 80%;
+	padding: 0px 4px;
+	height: 24px;
+	line-height: 21px;
+	text-indent: 0;
+	margin-left: 5px;
+}
+
+.media-modal .mejs-poster, .media-modal .mejs-overlay { /*prevents thumbnail overflow in Firefox */
+    max-width: 100%;
+}
+
